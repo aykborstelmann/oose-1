@@ -6,7 +6,7 @@ public class PersonMain {
     public static void main(String[] args) {
         List<Person> personList = new ArrayList<>();
         personList.add(new Person("Ayk", "Borstelmann", 19));
-        personList.add(new Person("Justus", "Großhardt", 18));
+        personList.add(new Person("Justus", "Groß-Hardt", 18));
         personList.add(new Person("Marco", "Adams", 20));
         personList.add(new Person("Julian", "Vogt", 20));
         personList.add(new Person("Julian", "Vogt", 18));

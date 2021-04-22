@@ -3,6 +3,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class PrimzahlrechnerMain {
     public static void main(String[] args) {
@@ -24,7 +25,7 @@ public class PrimzahlrechnerMain {
                 throw new RuntimeException(e);
             }
         }
-        final List<Integer> primes = primzahlrechner.stream().map(Primzahlrechner::getPrimes).flatMap(Collection::stream).collect(Collectors.toList());
+        final List<Integer> primes = Stream.concat(Stream.of(2), primzahlrechner.stream().map(Primzahlrechner::getPrimes).flatMap(Collection::stream)).collect(Collectors.toList());
         System.out.println(primes);
 
         /*
