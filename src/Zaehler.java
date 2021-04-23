@@ -5,7 +5,7 @@ public class Zaehler {
         return counter;
     }
 
-    public void inkrementiereCounter() {
+    public synchronized void inkrementiereCounter() {
         counter++;
         System.out.printf("%s %d\n", Thread.currentThread().getName(), counter);
     }
